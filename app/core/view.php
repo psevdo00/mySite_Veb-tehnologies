@@ -2,9 +2,9 @@
 
     class View{
 
-        function render($contentView, $title, $model = null, $layout = 'layout.php'){
+        function generate($content_view, $template_view, $data = null){
 
-            include 'app/views'.$layout;
+            include 'app/views/'.$template_view;
         
         }
 

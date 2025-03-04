@@ -1,15 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<meta charset="UFT-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Личный блог по принуждению</title>
-		<link rel="stylesheet" href="../assets/css/style.css">
-		<link rel="icon" href="../assets/img/icon.png">
-	</head>
-	<body>
-		<header class = "header">
+<header class = "header">
 			<div class = "menu">
 				<nav class = "main_menu">
 					<ul class = "list_menu">
@@ -64,7 +53,7 @@
 		<main class = "main_index">
 			<div class = "info_text">
 				<h1 class = "main_title">Лабораторная работы №1 <br> «Исследование возможностей языка разметки гипертекстов HTML и каскадных таблиц стилей CSS»</h1>
-				<img src = "../assets/img/piople.jpg" class = "picture">
+				<img src = "../test/img/piople.jpg" class = "picture">
 				<p> WTF?! Студент: Кудрявцев Андрей Викторович <br>Группа: ИС/б-22-1-о </p>
 			</div>
 		</main>
@@ -72,9 +61,6 @@
 			<p>Это подвал сайта. <br> Текущая дата:</p>
 			<div id = "current_time"></div>
 		</footer>
-		<script src="../assets/js/main.js"></script>
-		<script src="../assets/js/visit_to_page.js"></script>
-		<script src="../assets/js/current_time.js"></script>
-	</body>
-</html>
-
+		<script src="../test/js/main.js"></script>
+		<script src="../test/js/visit_to_page.js"></script>
+		<script src="../test/js/current_time.js"></script>

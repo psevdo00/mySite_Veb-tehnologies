@@ -1,9 +1,6 @@
 <?php
-    // Подключаем автозагрузчик классов (если используется)
-    //require_once __DIR__ . '/../app/core/autoload.php';
 
-    // Подключаем роутер
-    require_once __DIR__ . '/../app/core/router.php';
+    ini_set("display_errors",1);
+    require_once 'app/bootstrap.php';
 
-    // Запускаем роутер
-    Router::route();
+?>

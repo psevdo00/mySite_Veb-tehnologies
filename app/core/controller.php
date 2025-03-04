@@ -11,6 +11,8 @@
 
         }
 
+        function action_index(){}
+
     }
 
 ?>
