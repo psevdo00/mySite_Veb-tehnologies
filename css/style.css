@@ -22,6 +22,20 @@ footer{
 	margin-top: 290px;
 }
 
+.main_404 {
+
+	text-align: center; /* Выравнивание текста по центру */
+ 	margin: 0 auto;
+
+}
+
+.err_404 {
+
+	padding: 100px;
+	height: 340px;
+
+}
+
 /* Header */
 
 .header{
@@ -200,9 +214,9 @@ footer{
     text-decoration: none;
 }
 
-/*.hyper_list:hover .list_hobby {
+.hyper_list:hover .list_hobby {
 	display: block;
-}*/
+}
 
 /* Body_study */
 
