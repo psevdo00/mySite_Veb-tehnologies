@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Личный блог по принуждению</title>
-		<link rel="stylesheet" href="../test/css/style.css">
-		<link rel="icon" href="../test/img/icon.png">
+		<link rel="stylesheet" href="../mySite/css/style.css">
+		<link rel="icon" href="../mySite/img/icon.png">
 	</head>
 	<body>
 		<header class = "header">
@@ -68,6 +68,9 @@
 			<p>Это подвал сайта. <br> Текущая дата:</p>
 			<div id = "current_time"></div>
 		</footer>
+		<script src="../mySite/js/main.js"></script>
+		<script src="../mySite/js/visit_to_page.js"></script>
+		<script src="../mySite/js/current_time.js"></script>
 	</body>
 </html>
 

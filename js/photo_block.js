@@ -1,19 +1,19 @@
 const fotos = [
-	"../assets/img/cat_and_moon.jpg",
-	"../assets/img/boloto.jpg",
-	"../assets/img/romashka.jpg",
-	"../assets/img/head.jpg",
-	"../assets/img/floor.jpg",
-	"../assets/img/lavanda.jpg",
-	"../assets/img/picture_art.jpg",
-	"../assets/img/rosa.jpg",
-	"../assets/img/stone_home.jpg",
-	"../assets/img/Yellow_bool.jpg",
-	"../assets/img/second_romashka.jpg",
-	"../assets/img/sky.jpg",
-	"../assets/img/star_sky.jpg",
-	"../assets/img/sakura.jpg",
-	"../assets/img/dragon.jpg"
+	"../mySite/img/cat_and_moon.jpg",
+	"../mySite/img/boloto.jpg",
+	"../mySite/img/romashka.jpg",
+	"../mySite/img/head.jpg",
+	"../mySite/img/floor.jpg",
+	"../mySite/img/lavanda.jpg",
+	"../mySite/img/picture_art.jpg",
+	"../mySite/img/rosa.jpg",
+	"../mySite/img/stone_home.jpg",
+	"../mySite/img/Yellow_bool.jpg",
+	"../mySite/img/second_romashka.jpg",
+	"../mySite/img/sky.jpg",
+	"../mySite/img/star_sky.jpg",
+	"../mySite/img/sakura.jpg",
+	"../mySite/img/dragon.jpg"
 ]
 
 const titles = [
