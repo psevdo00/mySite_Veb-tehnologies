@@ -27,9 +27,13 @@
 			$controller_name = 'Controller_'.$controller_name;
 			$action_name = 'action_'.$action_name;
 
+			//echo '1 '.$model_name;
+
 			// подцепляем файл с классом модели
 			$model_file = strtolower($model_name).'.php';
 			$model_path = "app/models/".$model_file;
+
+			//echo '2 '.$model_name.' '.$model_file;
 
 			if(file_exists($model_path)) {
 
