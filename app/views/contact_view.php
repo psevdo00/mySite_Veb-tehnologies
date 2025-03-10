@@ -1,11 +1,25 @@
 <div class = "contact">
 	<h1 class = "contact_title">Отправить свои данные</h1>
     <div class = "student_form">
-		<form id = "student_form" action = "" onsubmit = "return handleSubmit()">
+		<form id="student_form" action="" method="post">
 		    <div class = "input">
 				<label for = "fio">ФИО: </label>
-				<input type = "text" name = "fio" id = "fio" required><br>
-				<span id="error_message_fio" style="color: red;"></span>
+				<input type = "text" name = "fio" id = "fio"><br>
+				<span id="error_message_fio" style="color: red;">
+					<?php
+
+						if (isset($data['fio'])){
+
+							foreach ($data['fio'] as $key => $value){
+
+								echo $value.'<br>';
+
+							}
+
+						}
+
+					?>
+				</span>
 			</div>
 			<div class = "input">
 				<span>Пол: </span>
@@ -18,7 +32,7 @@
 			</div>
 			<div class = "input">
 				<span>Возраст: </span>
-				<select id = "age" name = "age" required>
+				<select id = "age" name = "age">
 					<option value = "">Выбрать</option>
 					<option>16</option>
 					<option>17</option>
@@ -36,10 +50,25 @@
 					<option>29</option>   
 					<option>30</option>
 				</select>
+				<span id="error_message_fio" style="color: red;">
+					<?php
+
+						if (isset($data['age'])){
+
+							foreach ($data['age'] as $key => $value){
+
+								echo '<br>'.$value;
+
+							}
+
+						}
+
+					?>
+				</span>
 			</div>
 			<div class = "input" id = "input">
 				<span>Дата рождения: </span>
-				<input class = "date_of_birth" id = "date_of_birth" required>
+				<input class = "date_of_birth" id = "date_of_birth" autocomplete="off">
 				<div class = "calendar" id = "calendar">
 					<div class = "choose_year_month">
 						<div class = "lists">
@@ -68,22 +97,50 @@
 			</div>
 			<div class = "input">
 				<label for = "num_phone">Номер телефона: </label>
-				<input class = "phone_input" type = "text" name = "num_phone" id = "num_phone" required>
-				<span id="error_message_phone" style="color: red;"></span>
+				<input class = "phone_input" type = "text" name = "num_phone" id = "num_phone">
+				<span id="error_message_phone" style="color: red;">
+					<?php
+
+						if (isset($data['num_phone'])){
+
+							foreach ($data['num_phone'] as $key => $value){
+
+								echo '<br>'.$value;
+
+							}
+
+						}
+
+					?>
+				</span>
 			</div>
 			<div class = "input">
 				<label for = "email">Email: </label>
-				<input type = "text" name = "email" id = "email" required><br>
-				<span id="error_message_email" style="color: red;"></span>
+				<input type = "text" name = "email" id = "email"><br>
+				<span id="error_message_email" style="color: red;">
+					<?php
+
+						if (isset($data['email'])){
+
+							foreach ($data['email'] as $key => $value){
+
+								echo $value.'<br>';
+
+							}
+
+						}
+
+					?>
+				</span>
 			</div>
 			<div class = "input">
 				<label for = "massage">Введите текст: </label><br>
 				<textarea class = "massage_contact" cols = "50" rows = "10" name = "massage" id = "massage"></textarea>
 			</div>
-			<button id = "submit" type = "submit" disabled> Отправить </button>
+			<button> Отправить </button>
 			<button type = "reset">Очистить поля</button>
 		</form>
 	</div>
 </div>
-<script src="../mySite/js/handle_submit.js"></script>
+<!--<script src="../mySite/js/handle_submit.js"></script>-->
 <script src="../mySite/js/calendar.js"></script>

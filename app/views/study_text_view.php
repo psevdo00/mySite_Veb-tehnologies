@@ -1,23 +1,23 @@
 <div class = "test">
 				<h1 class = "test_title">Тест по дициплине "Основы программирования и алгоритмические языки"</h1>
-				<form id = "student_test" action = "" onsubmit = "return handleSubmit()">
+				<form id = "student_test" action="" method="post">
 					<div class = "question">	
 						<h4 class = "question_title">Вопрос 1:</h4>
 						<p>Цикл с постусловием может ни разу не выполниться?</p>
 						<label class = "contain_quest">
-							<input type = "checkbox" id = "quest1_1" value = "Правда">
+							<input type = "checkbox" id = "quest1_1" name = "quest1_1" value = "Правда">
 							<span class = "checkmark"></span>
 						Правда </label>
 						<label class = "contain_quest">
-							<input type = "checkbox" id = "quest1_2" value = "Ложь">
+							<input type = "checkbox" id = "quest1_2" name = "quest1_2" value = "Ложь">
 							<span class = "checkmark"></span>
 						Ложь </label>
 					</div>
 					<div class = "question">
 						<h4 class = "question_title">Вопрос 2:</h4>
 						<p>Что выведет данный код:</p> 
-						<p class = "program_code">s = 14,05735; <br> printf("%08.3f", s);</p>
-						<select class = "list_quest" id = "quest2" required>
+						<p class = "program_code">s = 14.05735; <br> printf("%08.3f", s);</p>
+						<select class = "list_quest" id = "quest2" name = "quest2">
 							<option value = "" hidden>Выбрать</option>
 							<optgroup label = "Целое число">
 								<option>14</option>
@@ -34,14 +34,29 @@
 					<div class = "question">
 						<h4 class = "question_title">Вопрос 3:</h4>
 						<p>Что позволяет выполнить определенный участок кода несколько раз?</p>
-						<input type = "text" class = "ask_quest" placeholder = "Введите ответ" id = "quest3" required>
+						<input type = "text" class = "ask_quest" placeholder = "Введите ответ" id = "quest3" name = "quest3">
 						<span id="error_message" style="color: red;"></span>
 					</div>
 					<div class = "info_student">
 						<label for = "message">Введите ваше ФИО: </label>
-						<input type = "text" name = "fio" id = "message" required>
+						<input type = "text" name = "fio" id = "fio">
+						<span id="error_message_fio" style="color: red;">
+							<?php
+
+								if (isset($data['fio'])){
+
+									foreach ($data['fio'] as $key => $value){
+
+										echo '<br>'.$value;
+
+									}
+
+								}
+
+							?>
+						</span>
 						<p>Выберете вашу учебную группу: </p>
-						<select class = "list_group" id = "group" name = "group" required>
+						<select class = "list_group" id = "group" name = "group">
 							<option value = "">Выбрать</option>
 							<optgroup label = "1-й курс">
 								<option>ИТ/б-24-1-о</option>
@@ -68,6 +83,21 @@
 								<option>ПИН/б-21-4-о</option>
 							</optgroup>
 						</select>
+						<span id="error_message_fio" style="color: red;">
+							<?php
+
+								if (isset($data['group'])){
+
+									foreach ($data['group'] as $key => $value){
+
+										echo '<br>'.$value;
+
+									}
+
+								}
+
+							?>
+						</span>
 					</div>
 					<div class = "button_test">
 						<button type = "submit">Отправить</button>
@@ -75,4 +105,4 @@
 					</div>
 				</form>
 			</div>
-            <script src="../mySite/js/study_test.js"></script>
+            <!--<script src="../mySite/js/study_test.js"></script>-->

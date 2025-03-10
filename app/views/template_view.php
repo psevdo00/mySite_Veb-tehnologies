@@ -62,7 +62,11 @@
 			</div>
 		</header>
 		<main class = "main_index">
-			<?php include("app/views/".$content_view); ?>
+			<?php 
+			
+				include("app/views/".$content_view); 
+				
+			?>
 		</main>	
         <footer>
 			<p>Это подвал сайта. <br> Текущая дата:</p>
