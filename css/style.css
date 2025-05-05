@@ -38,11 +38,13 @@ footer{
 
 /* Header */
 
-.header{
+header{
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	height: 70px;
+	padding-top: 20px;
 }
 
 .header_active{
@@ -539,4 +541,64 @@ td{
 	border-radius: 5px;
 	font-size: 19px;
 	padding-left: 15px;
+}
+
+/* guest_bool */
+.main_div {
+
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+
+}
+
+.form_info {
+
+	text-align: center;
+	flex: 0.7;
+
+}
+
+.reviews {
+
+	
+	flex: 1.3;
+
+}
+
+.review {
+
+	overflow: auto;
+	padding: 5px;
+	height: 600px;
+
+}
+
+.message {
+    border: 1px solid black;       /* Рамка вокруг отзыва */
+    border-radius: 10px;           /* Скруглённые углы */
+    padding: 15px;                /* Отступ внутри блока */
+    margin-bottom: 20px;          /* Отступ между отзывами */
+    background-color: #f9f9f9;    /* Светлый фон */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Лёгкая тень */
+    font-family: Arial, sans-serif; /* Шрифт */
+}
+
+.head_message {
+    border-bottom: 1px solid #000; /* Чёрная линия под шапкой */
+    padding-bottom: 8px;          /* Отступ под линией */
+    margin-bottom: 10px;          /* Отступ перед текстом отзыва */
+}
+
+.head_info {
+    margin: 0;                    /* Убираем стандартные отступы */
+    font-size: 16px;              /* Размер шрифта */
+    color: #333;                  /* Цвет текста */
+}
+
+.info_message {
+    margin: 0;                    /* Убираем стандартные отступы */
+    font-size: 14px;              /* Размер шрифта */
+    color: #555;                  /* Цвет текста */
+    line-height: 1.5;             /* Межстрочный интервал */
 }

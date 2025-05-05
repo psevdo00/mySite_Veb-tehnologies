@@ -56,6 +56,9 @@
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./history">История посещений</a>
 						</li>
+						<li class = "elem_menu">	
+							<a class = "elem_link" href = "./guest_book">Гостевая книга</a>
+						</li>
 					</ul>
 					<hr></hr>
 				</nav>
