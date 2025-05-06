@@ -48,6 +48,13 @@
 			<button> Отправить </button>
 			<button type = "reset">Очистить поля</button>
 		</form>
+		<form method="get">
+			<div class = "input">
+				<p>Сохранить все отзывы в базе данных</p>
+				<label for = "guest_book_file">Выберите файл: </label>
+				<button> Отправить </button>
+			</div>
+		</form>
     </div>
     <div class = "reviews">
 		<h2 style = "text-align: center">Отзывы</h2>

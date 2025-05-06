@@ -40,11 +40,37 @@
 
                 if (empty($data["errors"])){
 
-                    $this -> model -> save($_POST['fio'], $_POST['email'], $_POST['massage']);
+                    $this -> model -> save_message($_POST['fio'], $_POST['email'], $_POST['massage']);
                     header('Location: guest_book');
                     exit;
 
                 }
+
+            }
+
+            if ($_SERVER['REQUEST_METHOD'] === "GET" && isset($_GET)){
+
+                $filePath = fopen("txt/message.inc", "r");
+
+                if (file_exists($filePath)) {
+                    $file = fopen($filePath, "r");
+                        // Читаем содержимое файла
+                    $content = fread($file, filesize($filePath));
+                    fclose($file);
+                        
+                        // Выводим содержимое (или обрабатываем для БД)
+                    echo "<pre>" . htmlspecialchars($content) . "</pre>";
+                        
+                        // Здесь можно добавить запись в базу данных
+                        // Например:
+                        // $lines = explode("\n", $content);
+                        // foreach ($lines as $line) {
+                        //     saveToDatabase($line); // Ваша функция сохранения
+                        // }
+                } else {
+                    echo "Ошибка: Файл не найден.";
+                }
+
 
             }
 

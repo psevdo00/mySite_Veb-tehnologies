@@ -2,7 +2,7 @@
 
     class Model_guest_book extends Model{
 
-        public function save($fio, $email, $message){
+        public function save_message($fio, $email, $message){
 
             $date = date('d.m.y H:i');
             $data = $date . "; " . $fio . "; " . $email . "; " . $message . ";\n";

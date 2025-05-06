@@ -59,6 +59,12 @@
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./guest_book">Гостевая книга</a>
 						</li>
+						<li class = "elem_menu">	
+							<a class = "elem_link" href = "./blog">Блог</a>
+						</li>
+						<li class = "elem_menu">	
+							<a class = "elem_link" href = "./edit_blog">Редактор блога</a>
+						</li>
 					</ul>
 					<hr></hr>
 				</nav>
