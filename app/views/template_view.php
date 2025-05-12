@@ -49,7 +49,7 @@
 						</li>	
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./contact">Контакты</a>
-						</li>	
+						</li>
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./study_text">Тест по дисциплине</a>
 						</li>
@@ -58,6 +58,9 @@
 						</li>
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./guest_book">Гостевая книга</a>
+						</li>
+						<li class = "elem_menu">	
+							<a class = "elem_link" href = "./save_message">Сохранить гостевую книгу</a>
 						</li>
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./blog">Блог</a>

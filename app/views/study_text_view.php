@@ -43,9 +43,9 @@
 				<span id="error_message_fio" style="color: red;">
 					<?php
 
-						if (isset($data['fio'])){
+						if (isset($data["err"]['fio'])){
 
-							foreach ($data['fio'] as $key => $value){
+							foreach ($data["err"]['fio'] as $key => $value){
 
 								echo '<br>'.$value;
 
@@ -86,9 +86,9 @@
 				<span id="error_message_fio" style="color: red;">
 					<?php
 
-						if (isset($data['group'])){
+						if (isset($data["err"]['group'])){
 
-							foreach ($data['group'] as $key => $value){
+							foreach ($data["err"]['group'] as $key => $value){
 
 								echo '<br>'.$value;
 
@@ -104,17 +104,4 @@
 				<button type = "reset">Очистить поля</button>
 			</div>
 		</form>
-		<button style="margin-left: auto; margin-right: auto;" type = "button">Посмотреть сохраненные результаты пользователей</button>
 	</div>
-<div class="result_test">
-    <h2>Результаты тестов</h2>
-    <div class="scrollable-area">
-        <?php
-        // Здесь будет ваш PHP код для вывода результатов
-        // Например:
-        // foreach($results as $result) {
-        //     echo "<div class='result-item'>" . htmlspecialchars($result) . "</div>";
-        // }
-        ?>
-    </div>
-</div>
