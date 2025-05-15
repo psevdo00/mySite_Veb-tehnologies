@@ -18,49 +18,81 @@
             
             if ($_SERVER['REQUEST_METHOD'] === "POST"){
 
-                foreach ($_POST as $k => $v) {
+                if (isset($_FILES["csv_file"])){
 
-                    $data[$k] = trim($v);
+                    $csvData = file_get_contents($_FILES["csv_file"]["tmp_name"]);
+                    $lines = explode("\n", $csvData);
 
-                }
+                    $headers = str_getcsv(array_shift($lines), ";", '"');
 
-                $validator = new FormValidation();
-                $validation = $validator -> validate($data, [
-                    "title_post" => [
-                        "requered" => true,
-                        "regex" => '/^[а-яА-Я\s]+$/u',
-                    ],
-                    'info_post' => [
-                        'requered' => true,
-                    ],
-                ]);
+                    foreach ($lines as $line) {
+                        // Указываем точку с запятой как разделитель и учитываем кавычки
+                        $row = str_getcsv($line, ";", '"');
+                        
+                        // Фильтруем пустые строки
+                        if ($row !== [null] && $row !== [""]) {
+                            
+                            $post = $this -> model;
 
-                $data["errors"] = $validation->show_errors();
+                            $post -> setTitlePost($row[0]);
+                            $post -> setInfoPost($row[1]);
+                            $post -> setDate($row[3]);
+                            $post -> setPhoto("");
 
-                if (empty($data["errors"])){
+                            $post -> save();
+                            header('Location: edit_blog');
+                            exit;
+    
+                        }
+                    }
 
-                    $post = $this -> model;
+                } else {
 
-                    $post -> setTitlePost($_POST["title_post"]);
-                    $post -> setInfoPost($_POST["info_post"]);
-                    $post -> setDate(date('d.m.y H:i'));
+                    foreach ($_POST as $k => $v) {
 
-                    if (empty($_FILES)){
-
-                        $post -> setPhoto("хуй 1");
-
-                    } else {
-
-                        $post -> setPhoto($_FILES['photo_post']["name"]);
-
-                        $uploadDir = "img/";
-                        move_uploaded_file($_FILES['photo_post']["tmp_name"], $uploadDir . $_FILES['photo_post']["name"]);
+                        $data[$k] = trim($v);
 
                     }
 
-                    $post -> save();
-                    header('Location: edit_blog');
-                    exit;
+                    $validator = new FormValidation();
+                    $validation = $validator -> validate($data, [
+                        "title_post" => [
+                            "requered" => true,
+                            "regex" => '/^[а-яА-Я\s]+$/u',
+                        ],
+                        'info_post' => [
+                            'requered' => true,
+                        ],
+                    ]);
+
+                    $data["errors"] = $validation->show_errors();
+
+                    if (empty($data["errors"])){
+
+                        $post = $this -> model;
+
+                        $post -> setTitlePost($_POST["title_post"]);
+                        $post -> setInfoPost($_POST["info_post"]);
+                        $post -> setDate(date('d.m.y H:i'));
+
+                        if (empty($_FILES)){
+
+                            $post -> setPhoto("");
+
+                        } else {
+
+                            $post -> setPhoto($_FILES['photo_post']["name"]);
+
+                            $uploadDir = "img/";
+                            move_uploaded_file($_FILES['photo_post']["tmp_name"], $uploadDir . $_FILES['photo_post']["name"]);
+
+                        }
+
+                        $post -> save();
+                        header('Location: edit_blog');
+                        exit;
+
+                    }
 
                 }
 

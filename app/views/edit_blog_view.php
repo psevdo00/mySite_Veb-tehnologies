@@ -48,7 +48,7 @@
 			<button> Отправить </button>
 			<button type = "reset">Очистить поля</button>
 		</form>
-		<form style = "margin-top: 30px" method="post">
+		<form style = "margin-top: 30px" method="post" enctype="multipart/form-data">
 			<div class = "input">
 				<p>Добавление поста из CSV файла</p>
 				<label for = "csv_file">Выберите файл: </label>
