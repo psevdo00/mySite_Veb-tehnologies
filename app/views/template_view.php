@@ -53,24 +53,38 @@
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./study_text">Тест по дисциплине</a>
 						</li>
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./history">История посещений</a>
-						</li>
+						
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./guest_book">Гостевая книга</a>
 						</li>
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./save_message">Сохранить гостевую книгу</a>
-						</li>
+						
 						<li class = "elem_menu">	
 							<a class = "elem_link" href = "./blog">Блог</a>
 						</li>
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./edit_blog">Редактор блога</a>
-						</li>
 					</ul>
 					<hr></hr>
+					<?php
+						echo '<div class="admin-menu-wrapper">
+							<ul class = "admin_list_menu">
+								<li class = "elem_menu">	
+									<a class = "elem_link" href = "./edit_blog">Редактор блога</a>
+								</li>
+								<li class = "elem_menu">	
+									<a class = "elem_link" href = "./save_message">Сохранить гостевую книгу</a>
+								</li>
+								<li class = "elem_menu">	
+									<a class = "elem_link" href = "./history">История посещений</a>
+								</li>
+								<li class = "elem_menu">	
+									<a class = "elem_link" href = "./statistic">Статистика посещений</a>
+								</li>
+							</ul>
+						</div>'
+					?>	
 				</nav>
+				<div>
+					<button>Регистрация</button>
+				</div>
 			</div>
 		</header>
 		<main class = "main_index">

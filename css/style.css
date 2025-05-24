@@ -52,11 +52,18 @@ header{
 	background: linear-gradient(90deg, #fff7d7,#ffcb95,#ffa489);
 }
 
+.menu {
+
+	display: flex;
+
+}
+
 .main_menu{
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1680px;
+	max-width: 1380px;
 	padding: 0 15px;
+	
 }
 
 .current_time{
@@ -76,6 +83,26 @@ header{
 	justify-content: space-around;
 	list-style-type: none;
 	padding: 0;
+}
+
+.admin-menu-wrapper{
+
+	display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    width: 100%; /* На всю ширину */
+    margin: 0 auto; /* Автоматические отступы по бокам */
+
+}
+
+.admin_list_menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Центрируем элементы внутри */
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Убираем стандартные отступы */
+    gap: 50px; /* Отступ между элементами (опционально) */
+    max-width: 900px; /* Ограничиваем ширину, если нужно */
 }
 
 .elem_link{
