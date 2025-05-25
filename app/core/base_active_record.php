@@ -118,6 +118,21 @@ class BaseActiveRecord {
         return $result;
     }
 
+    function findLogin($login){
+
+        static::setConnection();
+
+        // Используем подготовленные запросы для безопасности
+        $sql = "SELECT * FROM user WHERE login = :login";
+        $stmt = static::$pdo->prepare($sql);
+        $stmt->execute([':login' => $login]);
+
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        return $result;
+
+    }
+
 }
 
 ?>

@@ -10,81 +10,89 @@
 	</head>
 	<body>
 		<header class = "header">
-			<div class = "menu">
-				<nav class = "main_menu">
-					<ul class = "list_menu">
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./index">Главная работа</a>
-						</li>
-						<li class = "elem_menu">
-							<a class = "elem_link" href = "./person_info">Обо мне</a>
-						</li>
-						<li class = "elem_menu">					
-							<div class = "hyper_list">
-								<a class = "elem_link" href = "./hobby">Мои интересы</a>
-								<ul class = "list_hobby">
-									<li class = "elem_main_menu">
-										<a class = "elem_main_link" href = "./hobby#part1">Моё хобби</a>
-									</li>
-									<li class = "elem_main_menu">
-										<a class = "elem_main_link" href = "./hobby#part2">Любимые книги</a>
-									</li>
-									<li class = "elem_main_menu">
-										<a class = "elem_main_link" href = "./hobby#part3">Любимая музыка</a>
-									</li>
-									<li class = "elem_main_menu">
-										<a class = "elem_main_link" href = "./hobby#part4">Любимые фильмы</a>
-									</li>
-									<li class = "elem_main_menu">
-										<a class = "elem_main_link" href = "./hobby#part5">Любимые игры</a>
-									</li>
-								</ul>
-							</div>
-						</li>
-						<li class = "elem_menu">
-							<a class = "elem_link" href = "./study">Учеба</a>
-						</li>
-						<li class = "elem_menu">
-							<a class = "elem_link" href = "./photo_album">Фотоальбом</a>
-						</li>	
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./contact">Контакты</a>
-						</li>
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./study_text">Тест по дисциплине</a>
-						</li>
-						
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./guest_book">Гостевая книга</a>
-						</li>
-						
-						<li class = "elem_menu">	
-							<a class = "elem_link" href = "./blog">Блог</a>
-						</li>
-					</ul>
-					<hr></hr>
-					<?php
-						echo '<div class="admin-menu-wrapper">
-							<ul class = "admin_list_menu">
-								<li class = "elem_menu">	
-									<a class = "elem_link" href = "./edit_blog">Редактор блога</a>
-								</li>
-								<li class = "elem_menu">	
-									<a class = "elem_link" href = "./save_message">Сохранить гостевую книгу</a>
-								</li>
-								<li class = "elem_menu">	
-									<a class = "elem_link" href = "./history">История посещений</a>
-								</li>
-								<li class = "elem_menu">	
-									<a class = "elem_link" href = "./statistic">Статистика посещений</a>
-								</li>
-							</ul>
-						</div>'
-					?>	
-				</nav>
-				<div>
-					<button>Регистрация</button>
+			<div class="auth-buttons">
+				<a href = "./reg"><button id = "btn_auth">Регистрация</button></a>
+				<a href = "./auth"><button id = "btn_reg">Авторизация</button></a>
+				<span id = "txt_user">Пользователь: {имя}</span>
+				<a href = ""><button id = "btn_exsit">Выйти</button></a>
+			</div>
+			<div class = "menu-container">
+				<div class="user-menu-wrapper">
+					<nav class = "main_menu">
+						<ul class = "list_menu">
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./index">Главная работа</a>
+							</li>
+							<li class = "elem_menu">
+								<a class = "elem_link" href = "./person_info">Обо мне</a>
+							</li>
+							<li class = "elem_menu">					
+								<div class = "hyper_list">
+									<a class = "elem_link" href = "./hobby">Мои интересы</a>
+									<ul class = "list_hobby">
+										<li class = "elem_main_menu">
+											<a class = "elem_main_link" href = "./hobby#part1">Моё хобби</a>
+										</li>
+										<li class = "elem_main_menu">
+											<a class = "elem_main_link" href = "./hobby#part2">Любимые книги</a>
+										</li>
+										<li class = "elem_main_menu">
+											<a class = "elem_main_link" href = "./hobby#part3">Любимая музыка</a>
+										</li>
+										<li class = "elem_main_menu">
+											<a class = "elem_main_link" href = "./hobby#part4">Любимые фильмы</a>
+										</li>
+										<li class = "elem_main_menu">
+											<a class = "elem_main_link" href = "./hobby#part5">Любимые игры</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class = "elem_menu">
+								<a class = "elem_link" href = "./study">Учеба</a>
+							</li>
+							<li class = "elem_menu">
+								<a class = "elem_link" href = "./photo_album">Фотоальбом</a>
+							</li>	
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./contact">Контакты</a>
+							</li>
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./study_text">Тест по дисциплине</a>
+							</li>
+							
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./guest_book">Гостевая книга</a>
+							</li>
+							
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./blog">Блог</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
+
+				<hr></hr>
+					
+				<?php
+					echo '<div class="admin-menu-wrapper">
+						<ul class = "admin_list_menu">
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./edit_blog">Редактор блога</a>
+							</li>
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./save_message">Сохранить гостевую книгу</a>
+							</li>
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./history">История посещений</a>
+							</li>
+							<li class = "elem_menu">	
+								<a class = "elem_link" href = "./statistic">Статистика посещений</a>
+							</li>
+						</ul>
+					</div>'
+				?>
+						
 			</div>
 		</header>
 		<main class = "main_index">

@@ -142,5 +142,4 @@
 		</form>
 	</div>
 </div>
-<!--<script src="../mySite/js/handle_submit.js"></script>-->
 <script src="../mySite/js/calendar.js"></script>
