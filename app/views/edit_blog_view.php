@@ -1,3 +1,14 @@
+<?php
+
+	if (!isset($_SESSION['role']) || $_SESSION['role'] == "isUser") {
+
+		header("Location: /mySite/auth");
+    	exit();
+
+	}
+
+?>
+
 <div class = "post_div">
 
     <div class = "form_info_post">

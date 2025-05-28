@@ -2,6 +2,7 @@
 
     require_once 'app/models/validations/FormValidation.php';
     require_once 'app/models/Model_auth.php';
+    require_once 'app/models/model_statistic.php';
 
     class Controller_reg extends Controller {
 
@@ -13,6 +14,11 @@
         }
 
         public function action_index(){
+
+            session_start();
+
+            $modelS = new Model_statistic();
+            $modelS -> save_statistic("Регистрация");
 
             $data = null;
             
@@ -56,6 +62,11 @@
                     } else {
 
                         $this -> model -> save_user_in_database($data["value"]);
+
+                        $_SESSION['login'] = $data["value"]['login'];
+                        $_SESSION['password'] = $data["value"]['passwords'];
+                        $_SESSION['role'] = "isUser";
+
                         //TODO("Пользователь зарегистрирован и авторизован")
 
                     }

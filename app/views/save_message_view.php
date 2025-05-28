@@ -1,3 +1,14 @@
+<?php
+
+	if (!isset($_SESSION['role']) || $_SESSION['role'] == "isUser") {
+
+		header("Location: /mySite/auth");
+    	exit();
+
+	}
+
+?>
+
 <div style="text-align: center; margin-top: 300px; margin-bottom: 600px;">
 
     <h1>Сохранение отзывов</h1>

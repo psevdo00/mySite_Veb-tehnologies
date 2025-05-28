@@ -1,10 +1,16 @@
 <?php
 
     require_once 'app/models/validations/FormValidation.php';
+    require_once 'app/models/model_statistic.php';
 
     class Controller_contact extends Controller {
 
         public function action_index() {
+
+            session_start();
+
+            $modelS = new Model_statistic();
+            $modelS -> save_statistic("Контакты");
 
             $data = null;
             

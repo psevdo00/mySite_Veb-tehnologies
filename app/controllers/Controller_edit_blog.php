@@ -2,6 +2,7 @@
 
     require_once 'app/models/validations/FormValidation.php';
     require_once 'app/models/model_post.php';
+    require_once 'app/models/model_statistic.php';
 
     class Controller_edit_blog extends Controller {
 
@@ -13,6 +14,11 @@
         }
 
         public function action_index(){
+
+            session_start();
+
+            $modelS = new Model_statistic();
+            $modelS -> save_statistic("Редактор блога");
 
             $data = [];
             

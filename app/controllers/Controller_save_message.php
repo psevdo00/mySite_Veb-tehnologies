@@ -1,6 +1,7 @@
 <?php
 
     require_once 'app/models/model_message.php';
+    require_once 'app/models/model_statistic.php';
 
     class Controller_save_message extends Controller {
 
@@ -13,6 +14,11 @@
 
         public function action_index(){
 
+            session_start();
+
+            $modelS = new Model_statistic();
+            $modelS -> save_statistic("Сохранение отзывов");
+
             if ($_SERVER['REQUEST_METHOD'] === "POST"){
 
                 $tmpFilePath = $_FILES['file']['tmp_name'];
@@ -23,7 +29,7 @@
 
             }
 
-            $this -> view -> generate("save_message_view.php", "template_view.php");
+            $this -> view -> generate("save_message_view.php", "template_view.php", null);
 
         }
 

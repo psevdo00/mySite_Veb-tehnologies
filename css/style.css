@@ -81,22 +81,9 @@ header {
 .auth-buttons {
 	position: absolute;
     display: flex;
-    gap: 10px;
-	width: 150px;
+	width: 200px;
 	margin-left: 30px;
 	flex-direction: column;
-}
-
-#btn_exsit {
-
-	display: none;
-
-}
-
-#txt_user {
-
-	display: none;
-
 }
 
 .auth-buttons button {
@@ -106,10 +93,9 @@ header {
 }
 
 .admin-menu-wrapper {
-    display: flex;
+	display: flex;
     justify-content: center;
     padding: 10px 0;
-	display: none;
 }
 
 .admin_list_menu {
@@ -120,6 +106,18 @@ header {
     padding: 0;
     margin: 0;
     gap: 30px;
+}
+
+#txt_user{
+
+	margin-top: 0;
+
+}
+
+#btn_reg {
+
+	margin-bottom: 10px;
+
 }
 
 .elem_link {
@@ -727,4 +725,47 @@ td{
 	width: auto;
 	height: auto;
 	object-fit: contain;
+}
+
+.statistic-entry {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.statistic-header {
+    margin-bottom: 5px;
+}
+
+.statistic-date {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.statistic-page {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.statistic-details {
+    margin-left: 20px;
+}
+
+.statistic-row {
+    margin-bottom: 3px;
+}
+
+.statistic-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.statistic-value {
+    color: #555;
+}
+
+.statistic-separator {
+    color: #999;
+    text-align: center;
+    margin-top: 10px;
 }

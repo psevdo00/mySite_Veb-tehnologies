@@ -1,6 +1,7 @@
 <?php
 
     require_once 'app/models/validations/FormValidation.php';
+    require_once 'app/models/model_statistic.php';
 
     class Controller_guest_book extends Controller {
 
@@ -12,6 +13,11 @@
         }
 
         public function action_index(){
+
+            session_start();
+
+            $modelS = new Model_statistic();
+            $modelS -> save_statistic("Гостевая книга");
 
             $data = [];
 

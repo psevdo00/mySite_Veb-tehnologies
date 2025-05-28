@@ -11,10 +11,10 @@
 	<body>
 		<header class = "header">
 			<div class="auth-buttons">
-				<a href = "./reg"><button id = "btn_auth">Регистрация</button></a>
-				<a href = "./auth"><button id = "btn_reg">Авторизация</button></a>
-				<span id = "txt_user">Пользователь: {имя}</span>
-				<a href = ""><button id = "btn_exsit">Выйти</button></a>
+				<a id = "btn_reg" href = "./reg"><button>Регистрация</button></a>
+				<a id = "btn_auth" href = "./auth"><button>Авторизация</button></a>
+				<p id = "txt_user">Пользователь: <span id = "user"></span></p>
+				<a id = "a_exit" href = "./exit"><button id = "btn_exit">Выйти</button></a>
 			</div>
 			<div class = "menu-container">
 				<div class="user-menu-wrapper">
@@ -75,22 +75,55 @@
 				<hr></hr>
 					
 				<?php
-					echo '<div class="admin-menu-wrapper">
-						<ul class = "admin_list_menu">
-							<li class = "elem_menu">	
-								<a class = "elem_link" href = "./edit_blog">Редактор блога</a>
-							</li>
-							<li class = "elem_menu">	
-								<a class = "elem_link" href = "./save_message">Сохранить гостевую книгу</a>
-							</li>
-							<li class = "elem_menu">	
-								<a class = "elem_link" href = "./history">История посещений</a>
-							</li>
-							<li class = "elem_menu">	
-								<a class = "elem_link" href = "./statistic">Статистика посещений</a>
-							</li>
-						</ul>
-					</div>'
+					// Проверяем, существует ли сессия и роль
+					if (isset($_SESSION['role'])) {
+						
+						if ($_SESSION['role'] == "isAdmin") {
+
+							echo '<div class="admin-menu-wrapper">
+								<ul class = "admin_list_menu">
+									<li class = "elem_menu">	
+										<a class = "elem_link" href = "./edit_blog">Редактор блога</a>
+									</li>
+									<li class = "elem_menu">	
+										<a class = "elem_link" href = "./save_message">Сохранить гостевую книгу</a>
+									</li>
+									<li class = "elem_menu">	
+										<a class = "elem_link" href = "./history">История посещений</a>
+									</li>
+									<li class = "elem_menu">	
+										<a class = "elem_link" href = "./statistic">Статистика посещений</a>
+									</li>
+								</ul>
+							</div>';
+
+						}
+
+						if ($_SESSION['role'] == "isUser" || $_SESSION['role'] == "isAdmin") {
+
+							$login = htmlspecialchars($_SESSION['login'], ENT_QUOTES, 'UTF-8');
+							
+							echo "<script>
+								document.getElementById('btn_auth').style.display = 'none';
+								document.getElementById('btn_reg').style.display = 'none';
+								document.getElementById('txt_user').style.display = 'inline-block';
+								document.getElementById('btn_exit').style.display = 'block'; 
+								document.getElementById('user').textContent = '$login';
+							</script>";
+						}
+
+					} else {
+
+						echo "<script>
+								document.getElementById('btn_auth').style.display = 'block';
+								document.getElementById('btn_reg').style.display = 'block';
+								document.getElementById('txt_user').style.display = 'none';
+								document.getElementById('btn_exit').style.display = 'none'; 
+								document.querySelector('.admin-menu-wrapper').style.display = 'none';
+							</script>";
+
+					}
+
 				?>
 						
 			</div>

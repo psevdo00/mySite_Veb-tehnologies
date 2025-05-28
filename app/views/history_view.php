@@ -1,3 +1,14 @@
+<?php
+
+	if (!isset($_SESSION['role']) || $_SESSION['role'] == "isUser") {
+
+		header("Location: /mySite/auth");
+    	exit();
+
+	}
+
+?>
+
 <h1 class = "title_visit">История просмотра</h1>
 			<div class = "visit_container">
 				<p class = "visit_text">Количество посещений всего</p>

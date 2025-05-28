@@ -2,7 +2,6 @@
 
     require_once 'app/core/base_active_record.php';
 
-
     class Model_post extends BaseActiveRecord{
 
         protected static $tableName = "post";

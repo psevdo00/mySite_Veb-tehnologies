@@ -3,6 +3,7 @@
     require_once 'app/models/validations/FormValidation.php';
     require_once 'app/models/validations/ResultsVerification.php';
     require_once 'app/models/model_test_ask.php';
+    require_once 'app/models/model_statistic.php';
 
     class Controller_study_text extends Controller{
 
@@ -14,6 +15,11 @@
         }
 
         public function action_index(){
+
+            session_start();
+
+            $modelS = new Model_statistic();
+            $modelS -> save_statistic("Учебный тест");
 
             $data = null;
             
