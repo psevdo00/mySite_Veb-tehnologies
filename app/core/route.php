@@ -1,4 +1,7 @@
 <?php
+
+	require_once 'app/controllers/Controller_statistic.php';
+
 	class Route {
 
 		static function start(){
@@ -14,8 +17,20 @@
 				$controller_name = $routes[2];
 
 			}
+
+			if (str_contains($controller_name, "?")){
+
+				$controller_names = explode('?', $controller_name);
+				$controller_name = $controller_names[0];
+				$page = $controller_names[1];
+
+				$controller = new Controller_statistic();
+				$controller->action_index($page);
+				return; // Завершаем выполнение после обработки
+
+			}
 			
-			//получаем имя экшена
+			//получаем имя action
 			if ( !empty($routes[3]) ) {
 
 				$action_name = $routes[3];

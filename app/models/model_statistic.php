@@ -14,7 +14,7 @@
 
         function save_statistic($page){
 
-            $this->time_statistic = date('Y-m-d h:m:s');
+            $this->time_statistic = date('d.m.y H:i');
             $this->web_page = $page;
             $this->ip_address = $_SERVER['REMOTE_ADDR'];
             $this->host_name = gethostbyaddr($_SERVER['REMOTE_ADDR']);

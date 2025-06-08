@@ -646,7 +646,7 @@ td{
 
 	overflow: auto;
 	padding: 5px;
-	height: 600px;
+	height: 717px;
 
 }
 
@@ -768,4 +768,25 @@ td{
     color: #999;
     text-align: center;
     margin-top: 10px;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+.pagination a {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    color: #333;
+}
+.pagination a.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.pagination a:hover:not(.active) {
+    background: #f0f0f0;
 }
